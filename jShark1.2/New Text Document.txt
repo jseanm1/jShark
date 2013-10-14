@@ -1,0 +1,121 @@
+/*
+ * --------------------------------
+ * Author: Janindu Arukgoda
+ * --------------------------------
+ */
+package com.janindu.jshark_1_2_activity;
+
+import java.util.ArrayList;
+
+import com.janindu.jshark1_2_network.Session;
+import com.janindu.jshark_1_2.R;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.TextView;
+
+public class SavedView extends Activity {
+	/*************************************************************/
+	private TextView packetView;
+	private boolean tcp;
+	private boolean udp;
+	private boolean icmp;
+	private boolean arp;
+	private String ip;
+	private ArrayList<String> packetList;
+	/*************************************************************/
+
+	/*************************************************************/
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_saved_view);
+		
+		packetView = (TextView) findViewById(R.id.spacketView);
+		
+		//back.setOnClickListener(goBack); GIVES A NULL POINTER EXCEPTION!!!		
+		start();
+	}
+	/*************************************************************/
+
+	/*************************************************************/
+	private void start() {
+		// TODO Auto-generated method stub
+		Bundle extras = getIntent().getExtras();
+		
+		if(extras != null){
+			tcp = extras.getBoolean("tcp");
+			udp = extras.getBoolean("udp");
+			icmp = extras.getBoolean("icmp");
+			arp = extras.getBoolean("arp");
+			ip = extras.getString("ip");
+			
+			setView();
+			
+			Session session = new Session();
+			packetList = session.readFromFile("hello");
+			packetView.append("\nAll set to read\n");
+			for(int i=0;i<packetList.size();i++){
+				packetView.append(packetList.get(i)+"\n");
+			}
+		} 		
+	}
+	/*************************************************************/
+
+	/*************************************************************/
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.saved_view, menu);
+		return true;
+	}
+	/*************************************************************/
+	
+	/*************************************************************/
+	OnClickListener goBack = new OnClickListener() {
+		
+		@Override
+		public void onClick(View arg0) {
+			// TODO Auto-generated method stub
+			
+		}
+	};
+	/*************************************************************/
+	
+	/*************************************************************/
+	private void setView(){
+		// Show the filters on packetView 
+		
+		packetView.append("Protocols: ");
+		if(!tcp&&!udp&&!icmp&&!arp){
+			packetView.append("No filter");
+		}
+		else{
+			if(tcp){
+				packetView.append("TCP ");
+			}
+			if(udp){
+				packetView.append("UDP ");
+			}
+			if(icmp){
+				packetView.append("ICMP ");
+			}
+			if(arp){
+				packetView.append("ARP");
+			}
+		}
+		
+		packetView.append("\nIP: ");
+		if(ip.equals("")){
+			packetView.append("All\n");				
+		}
+		else{
+			packetView.append(ip+"\n");
+		}		
+	}
+	/*************************************************************/	
+	
+}

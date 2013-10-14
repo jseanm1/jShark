@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Network Protocol Analyzer for Android"
+        android:textSize="15sp"
+        android:textStyle="italic"
+        android:gravity="center"
+        />
+    
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select an option and get started"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        />
+
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+    	<Button
+    	    android:id="@+id/buttonStartCapture"
+    	    android:layout_width="175dp"
+    	    android:layout_height="wrap_content"
+    	    android:layout_alignParentTop="true"
+    	    android:layout_centerHorizontal="true"
+    	    android:layout_marginTop="36dp"
+    	    android:text="@string/buttonStartCaptureText" />
+
+    	<Button
+    	    android:id="@+id/buttonLoadSaved"
+    	    android:layout_width="175dp"
+    	    android:layout_height="wrap_content"
+    	    android:layout_alignLeft="@+id/buttonStartCapture"
+    	    android:layout_below="@+id/buttonStartCapture"
+    	    android:layout_marginTop="30dp"
+    	    android:text="@string/buttonLoadSavedText" />
+    
+    </RelativeLayout>
+    
+</LinearLayout>

@@ -1,0 +1,26 @@
+ARP
+07:54:28.589279 arp who-has 10.0.3.2 tell 10.0.3.15
+
+07:54:28.590235 arp reply 10.0.3.2 is-at 52:54:00:12:35:02
+
+UDP
+07:54:30.597339 IP (tos 0x0, ttl 9, id 0, offset 0, flags [DF], proto UDP (17),
+length 38) 10.0.3.15.41783 > 222.165.163.177.33460: UDP, length 10
+
+TCP
+07:54:33.125437 IP (tos 0x0, ttl 64, id 42340, offset 0, flags [DF], proto TCP (
+6), length 40) 10.0.3.15.50386 > 222.165.163.20.443: F, cksum 0x8ee3 (incorrect
+(-> 0xc65b), 1:1(0) ack 1 win 15544
+
+07:54:33.126520 IP (tos 0x0, ttl 64, id 7367, offset 0, flags [none], proto TCP
+(6), length 40) 222.165.163.174.443 > 10.0.3.15.59100: ., cksum 0x53e2 (correct)
+, ack 2 win 65535
+
+ICMP
+08:00:51.298565 IP (tos 0x0, ttl 64, id 0, offset 0, flags [DF], proto ICMP (1),
+ length 84) 10.0.3.15 > 222.165.163.166: ICMP echo request, id 35598, seq 4, len
+gth 64
+
+08:00:51.393412 IP (tos 0x0, ttl 55, id 7394, offset 0, flags [DF], proto ICMP (
+1), length 84) 222.165.163.166 > 10.0.3.15: ICMP echo reply, id 35598, seq 4, le
+ngth 64

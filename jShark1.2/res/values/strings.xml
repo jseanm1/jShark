@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">jShark1.2</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="buttonStartCaptureText">Start</string>
+    <string name="buttonLoadSavedText">Load</string>
+    <string name="title_activity_capture_session">jShark1.2</string>
+    <string name="buttonGo">GO</string>
+    <string name="title_activity_capture_view">jShark1.2</string>
+    <string name="buttonSave">Save</string>
+    <string name="buttonStop">Stop</string>
+    <string name="buttonBack">Back</string>
+    <string name="title_activity_saved_view">jShark1.2</string>
+    <string name="title_activity_saved_session">jShark1.2</string>
+    <string name="buttonStart">Start</string>
+
+</resources>

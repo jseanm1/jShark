@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.janindu.jshark_1_2"
+    android:versionCode="1"
+    android:versionName="1.0" >
+    
+    <instrumentation 
+        android:name="android.test.InstrumentationTestRunner"
+        android:targetPackage="com.janindu.jshark_1_2"
+        android:label="Test Instrumentation"
+        />
+    
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        
+        <uses-library
+        android:name = "android.test.runner"
+        />
+    
+        <activity
+            android:name="com.janindu.jshark_1_2_activity.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.janindu.jshark_1_2_activity.CaptureSession"
+            android:label="@string/title_activity_capture_session" >
+            <intent-filter>
+            <action android:name="android.intent.action.CAPTURE" />
+
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+        </activity>        
+
+        <activity
+            android:name="com.janindu.jshark_1_2_activity.CaptureView"
+            android:label="@string/title_activity_capture_view" >
+        	<intent-filter>
+            	<action android:name="android.intent.action.VIEW" />
+            	<category android:name="android.intent.category.DEFAULT" />
+        	</intent-filter>
+        </activity>       
+
+        <activity
+            android:name="com.janindu.jshark_1_2_activity.SavedSession"
+            android:label="@string/title_activity_saved_session" >
+             <intent-filter>
+            	<action android:name="android.intent.action.SAVED_SESSION" />
+            	<category android:name="android.intent.category.DEFAULT" />
+        	</intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.janindu.jshark_1_2_activity.SavedView"
+            android:label="@string/title_activity_saved_view" >
+             <intent-filter>
+            	<action android:name="android.intent.action.SAVED_VIEW" />
+            	<category android:name="android.intent.category.DEFAULT" />
+        	</intent-filter>
+        </activity>
+        	
+    </application>
+
+</manifest>

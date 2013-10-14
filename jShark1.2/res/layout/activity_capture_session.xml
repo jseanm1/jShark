@@ -1,0 +1,78 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".CaptureSession" 
+    android:orientation="vertical">
+    
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Filter By Protocol"
+        android:textSize="20sp"
+        android:gravity="center"
+        />
+
+    <CheckBox
+        android:id="@+id/ctcp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TCP"
+        android:enabled="true" />
+    
+    <CheckBox
+        android:id="@+id/cudp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="UDP"
+        android:enabled="true" />
+    
+    <CheckBox
+        android:id="@+id/cicmp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ICMP"
+        android:enabled="true" />
+    
+    <CheckBox 
+        android:id="@+id/carp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ARP"
+        android:enabled="true" 
+        />
+        />"
+    
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Filter By IP Address"
+        android:textSize="20sp"
+        android:gravity="center"
+        />
+    
+    <EditText 
+        android:id="@+id/cip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:hint="0.0.0.0"
+        android:gravity="center"
+        />
+    
+    <Button 
+        android:id="@+id/cgo"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/buttonGo"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        />"
+    
+    
+</LinearLayout>
